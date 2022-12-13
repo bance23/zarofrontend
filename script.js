@@ -1,7 +1,9 @@
-fetch('http://localhost:3000/login').then(x => x.json()).then(y => megjelenit(y));
+//fetch('http://localhost:3000/login').then(x => x.json()).then(y => megjelenit(y));
+fetch('http://localhost:3000/login').then(x => x.json()).then(y => getDbData(y));
+
 let userData;
 
-function megjelenit(tomb){
+function megjelenit(tomb) {
     let sz = "";
 
     for (let elem of tomb) {
@@ -15,21 +17,28 @@ function megjelenit(tomb){
     console.log(tomb);
 }
 
-function getDbData(data){
+function getDbData(data) {
     userData = data;
 }
 
-function login(){
-    let inputUsername = document.getElementById('username').value;
-    let passwordUsername = document.getElementById('password').value;
+function login() {
+    let inputUsername = document.getElementsByTagName("input")[0].value;
+    let inputPassword = document.getElementsByTagName("input")[1].value;
+    let belep = false;
 
-    console.log(document.getElementById('username').value +  " " + document.getElementById('password').value);
+    console.log(inputUsername + " " + inputPassword);
 
     for (let elem of userData) {
-        if(elem.username == inputUsername && elem.password == passwordUsername){
-            window.location.href = "fooldal.html";
-        }else{
-            alert("Szar vagy nem jo a loginod");
+        if (elem.username == inputUsername && elem.password == inputPassword) {
+            belep = true;
+            break;
         }
+    }
+
+    if (belep) {
+        window.location.href = "fooldal.html";
+        belep = false;
+    } else {
+        alert("Nem jo a loginod");
     }
 }
