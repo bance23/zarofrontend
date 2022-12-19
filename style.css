@@ -29,3 +29,7 @@ input{
 .grad {
     background-image: linear-gradient(to bottom right, #6f36bc, #f3efff);
 }
+
+#loginBox{
+    min-width: fit-content;
+}
