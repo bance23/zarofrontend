@@ -10,6 +10,11 @@
     line-height: 40px;
 }
 
+.centerFlex{
+    justify-content: center;
+    margin-top: 8%;
+}
+
 button {
     border: 1px solid black;
     border-radius: 5px;
@@ -32,4 +37,24 @@ input{
 
 #loginBox{
     min-width: fit-content;
+}
+
+#dataholder{
+    margin-top: 8%;
+    margin-left: auto;
+    margin-right: auto;
+    color:white; 
+    font-size: 30px;
+    background-color: grey; 
+    border-collapse:separate;
+    border-spacing: 2em;
+}
+
+tr{
+    
+}
+
+#dataholder > td{
+    margin-left: 5%;
+    margin-right: 5%;
 }
