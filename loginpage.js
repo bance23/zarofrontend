@@ -7,13 +7,8 @@ function megjelenit(tomb) {
         sz += "<tr>";
         sz += "<td>" + elem.username + "</td>";
         sz+= "<td>" + elem.password + "</td>";
-<<<<<<< HEAD
-        sz+= "<td><button onclick='modositas(`"+elem.username+"`)'>Modositas</button></td>";
-        sz+= "<td><button onclick='torles(`"+elem.username+"`)'>Torles</button></td>";
-=======
         sz+= "<td><button onclick='modositas("+elem.username.text+")'>Modositas</button></td>";
         sz+= "<td><button onclick='torles("+elem.username+")'>Torles</button></td>";
->>>>>>> 137789bfc158f252942445945e373cc322fa5c82
         sz += "</tr>";  
     }
 
@@ -23,7 +18,6 @@ function megjelenit(tomb) {
 }
 
 function torles(username){
-<<<<<<< HEAD
     if(confirm("Biztos torolni akarod?")){
         
     }else{
@@ -43,9 +37,6 @@ function torles(username){
       .then(response => alert(response.json())) 
 
       location.reload();
-=======
-    //post to backend
->>>>>>> 137789bfc158f252942445945e373cc322fa5c82
 }
 
 function modositas(username){
@@ -66,8 +57,4 @@ function modositas(username){
       .then(response => alert(response.json())) 
 
       location.reload();
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 137789bfc158f252942445945e373cc322fa5c82
