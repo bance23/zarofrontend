@@ -7,7 +7,6 @@ function megjelenit(tomb) {
         sz += "<tr>";
         sz += "<td>" + elem.score_id + "</td>";
         sz += "<td>" + elem.score_playerid + "</td>";
-        sz += "<td>" + elem.score_palyaid + "</td>";
         sz += "<td>" + elem.score_points + "</td>";
         sz += "<td>" + (elem.score_date.substring(0, elem.score_date.length - 14)) + "</td>";
         sz += "<td>" + elem.score_time + "</td>";
