@@ -1,4 +1,4 @@
-fetch('http://localhost:3000/player').then(x => x.json()).then(y => megjelenit(y));
+fetch('http://localhost:24002/player').then(x => x.json()).then(y => megjelenit(y));
 
 function megjelenit(tomb) {
     let sz = "";
@@ -30,7 +30,7 @@ function torles(playerid){
         "bevitel1": id     
       }
       
-      fetch('http://localhost:3000/playerDelete', {
+      fetch('http://localhost:24002/playerDelete', {
         method: "POST",
         body: JSON.stringify(adatok),
         headers: {"Content-type": "application/json; charset=UTF-8"}
@@ -50,7 +50,7 @@ function modositas(username){
         "bevitel3": felhasznalonev      
       }
       
-      fetch('http://localhost:3000/playerUpdate', {
+      fetch('http://localhost:24002/playerUpdate', {
         method: "POST",
         body: JSON.stringify(adatok),
         headers: {"Content-type": "application/json; charset=UTF-8"}

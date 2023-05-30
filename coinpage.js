@@ -1,4 +1,4 @@
-fetch('http://localhost:3000/coin').then(x => x.json()).then(y => megjelenit(y));
+fetch('http://localhost:24002/coin').then(x => x.json()).then(y => megjelenit(y));
 
 function megjelenit(tomb) {
     let sz = "";
@@ -29,7 +29,7 @@ function torles(coinid){
         "bevitel1": id     
       }
       
-      fetch('http://localhost:3000/coinDelete', {
+      fetch('http://localhost:24002/coinDelete', {
         method: "POST",
         body: JSON.stringify(adatok),
         headers: {"Content-type": "application/json; charset=UTF-8"}
@@ -47,7 +47,7 @@ function modositas(coinid){
         "bevitel1": ertek     
       }
       
-      fetch('http://localhost:3000/coinUpdate', {
+      fetch('http://localhost:24002/coinUpdate', {
         method: "POST",
         body: JSON.stringify(adatok),
         headers: {"Content-type": "application/json; charset=UTF-8"}

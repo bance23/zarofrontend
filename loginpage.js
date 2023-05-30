@@ -1,4 +1,4 @@
-fetch('http://localhost:3000/login').then(x => x.json()).then(y => megjelenit(y));
+fetch('http://localhost:24002/login').then(x => x.json()).then(y => megjelenit(y));
 
 function megjelenit(tomb) {
     let sz = "";
@@ -29,7 +29,7 @@ function torles(username){
         "bevitel1": id     
       }
       
-      fetch('http://localhost:3000/loginDelete', {
+      fetch('http://localhost:24002/loginDelete', {
         method: "POST",
         body: JSON.stringify(adatok),
         headers: {"Content-type": "application/json; charset=UTF-8"}
@@ -49,7 +49,7 @@ function modositas(username){
         "bevitel3": felhasznalonev      
       }
       
-      fetch('http://localhost:3000/loginUpdate', {
+      fetch('http://localhost:24002/loginUpdate', {
         method: "POST",
         body: JSON.stringify(adatok),
         headers: {"Content-type": "application/json; charset=UTF-8"}

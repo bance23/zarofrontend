@@ -1,4 +1,4 @@
-fetch('http://localhost:3000/score').then(x => x.json()).then(y => megjelenit(y));
+fetch('http://localhost:24002/score').then(x => x.json()).then(y => megjelenit(y));
 
 function megjelenit(tomb) {
     let sz = "";
@@ -33,7 +33,7 @@ function torles(scoreid){
         "bevitel1": id     
       }
       
-      fetch('http://localhost:3000/scoreDelete', {
+      fetch('http://localhost:24002/scoreDelete', {
         method: "POST",
         body: JSON.stringify(adatok),
         headers: {"Content-type": "application/json; charset=UTF-8"}
@@ -59,7 +59,7 @@ function modositas(score_id){
         "bevitel6": scoreId,      
       }
       
-      fetch('http://localhost:3000/scoreUpdate', {
+      fetch('http://localhost:24002/scoreUpdate', {
         method: "POST",
         body: JSON.stringify(adatok),
         headers: {"Content-type": "application/json; charset=UTF-8"}

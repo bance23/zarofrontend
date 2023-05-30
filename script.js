@@ -1,5 +1,5 @@
-//fetch('http://localhost:3000/login').then(x => x.json()).then(y => megjelenit(y));
-fetch('http://localhost:3000/login').then(x => x.json()).then(y => getDbData(y));
+//fetch('http://localhost:24002/login').then(x => x.json()).then(y => megjelenit(y));
+fetch('http://localhost:24002/login').then(x => x.json()).then(y => getDbData(y));
 
 let userData;
 
